@@ -257,6 +257,10 @@ a.icon {
   flex-wrap: nowrap;
 }
 
+.contact-head>h2 {
+  white-space: nowrap;
+}
+
 
 .contact-container {
   display: flex;
@@ -265,7 +269,6 @@ a.icon {
   width: 100vw;
   justify-content: center;
   align-items: center;
-  border: 1px solid black;
   position: absolute;
   top: 50%;
 }
@@ -305,6 +308,13 @@ a.icon {
   .links {
     height: 15rem;
     flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .contact-head>h2 {
+    align-self: center;
+    font-size: 2rem;
   }
 }
 
