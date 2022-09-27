@@ -77,8 +77,6 @@ a.icon {
 }
 
 .topnav a.active {
-  background-color: var(--nav-active);
-  color: black;
   font-size: 1.7rem;
   font-weight: 500;
 }
@@ -95,14 +93,14 @@ a.icon {
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 650px) {
   .topnav a:not(:first-child) {display: none;}
   .topnav a.icon {
     display: block;
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 650px) {
   .topnav.responsive {position: relative;}
   .topnav.responsive a.icon {
     position: absolute;
@@ -117,7 +115,7 @@ a.icon {
 }
 
 .welcome-section {
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   display: flex;
   flex-direction: column;
