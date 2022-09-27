@@ -4,9 +4,9 @@
 --background-main: #D0E1F2;
 --nav-main: #305173;
 --nav-compl: #BF882A;
---nav-active: #734A02;
+--nav-active: #F2F1D0;
 --section-color-1:#8AA4BF;
---section-color-2: #67AEF4;
+--section-color-2: #A3FFD2;
 }
 
 * {
@@ -33,6 +33,12 @@ body {
   color: #071422;
 }
 
+img {
+  width: 100%;
+  min-width: 200px;
+  max-width: 300px;
+}
+
 h1,
 h2 {
   font-family: 'Cormorant Garamond', serif;
@@ -52,6 +58,7 @@ h2 {
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 2;
 }
 
 a.icon {
@@ -60,18 +67,20 @@ a.icon {
 
 .topnav a {
   text-decoration: none;
-  color: white;
+  color: var(--section-color-1);
   padding: 1rem;
 }
 
 .topnav a:hover {
-  background-color: var(--nav-compl);
+  background-color: var(--section-color-2);
   color: black;
 }
 
 .topnav a.active {
   background-color: var(--nav-active);
   color: black;
+  font-size: 1.7rem;
+  font-weight: 500;
 }
 
 .nav-container {
@@ -123,8 +132,188 @@ a.icon {
   font-size: 3rem;
 }
 
+@media screen and (max-width: 650px) {
+  .welcome-section > h1 {
+    font-size: 3rem;
+  }
+
+  .welcome-section > p {
+    font-size: 2rem;
+  }
+
+
+}
+
 .my-projects {
   text-align: center;
-  display: grid;
-  
+  background-color: var(--section-color-2);
+  display: flex;
+  flex-direction: column;
+  height: 120vh;
+  row-gap: 10rem;
+  justify-content: center;
+  align-items: center;
 }
+
+.project>p {
+  letter-spacing: 0px;
+}
+
+.project {
+  color: black;
+}
+
+.grid-item-1 {
+  margin-top: 30rem; 
+}
+
+.slideshow-container {
+  
+  max-width: 1280px;
+  position: relative;
+  margin: auto;
+  z-index: 1;
+}
+
+.obj-img {
+  object-fit: cover;
+  filter: grayscale(100%);
+}
+
+.mySlides {
+  display: none;
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  width: auto;
+  top: 110%;
+  right: 84.7%;
+  margin-top: -22px;
+  padding: 16px;
+  color: black;
+  background-color: var(--section-color-2);
+  font-weight: bold;
+  font-size: 18px;
+  border: 3px solid black;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+
+
+
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.text {
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+  position: relative;
+  bottom: 720%;
+  left: 2%;
+}
+
+@media screen and (max-width: 650px) {
+  .grid-item-1>h2 {
+    font-size: 4rem;
+}
+  .grid-item-1>p {
+    font-size: 1.8rem;
+  }
+
+
+}
+
+.contact-section {
+  position: relative;
+}
+
+.contact-head {
+  margin-bottom: 5rem;
+  flex-wrap: nowrap;
+}
+
+
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  position: absolute;
+  top: 50%;
+}
+
+.active,
+.dot:hover {
+
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+.links {
+  display: flex;
+  width: 40em;
+  max-width: 980px;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.contact-info {
+  font-size: 2.4rem;
+  color: var(--nav-main);
+  text-shadow: 1px 1px 1px #1f1f1f;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 650px) {
+
+  .contact-head>h2 {
+    font-size: 3rem;
+  }
+
+  .links {
+    height: 15rem;
+    flex-direction: column;
+  }
+}
+
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+
